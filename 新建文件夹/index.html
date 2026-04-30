@@ -1,0 +1,429 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>雪秋小可爱</title>
+  <link rel="icon" type="image/jpeg" href="123123123.jpg" />
+  <style>
+    :root { color-scheme: light; }
+    .site-footer {
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      color: #666;
+      /* 当它在浮窗内部时不需要固定 */
+      /* position: fixed; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,.8); */
+    }
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      color: #1f2937;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      position: relative;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 130px;
+      height: 130px;
+      background-image: url("1233.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      opacity: 0.8;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .card {
+      width: min(92vw, 560px);
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(14px) saturate(130%);
+      -webkit-backdrop-filter: blur(14px) saturate(130%);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    h1 {
+      margin: 0 0 18px;
+      font-size: 2rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      display: block;
+    }
+    .contact {
+      line-height: 1.9;
+      font-size: 1.05rem;
+      text-align: left;
+      margin: 0 auto;
+      width: fit-content;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    #language-select {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 8px 12px;
+      border: 1px solid #2563eb;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #1f2937;
+      font-size: 0.95rem;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+
+    #language-select:hover {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+      border-color: #1d4ed8;
+    }
+
+    #language-select:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #1d4ed8;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    #language-select option {
+      background: white;
+      color: #1f2937;
+      padding: 8px;
+    }
+
+    @media (orientation: portrait) {
+      body {
+        background-image: url("bg-portrait.png");
+        background-size: cover;
+      }
+    }
+
+    @media (orientation: landscape) {
+      body {
+        background-image: url("bg-landscape.png");
+        background-size: cover;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: min(92vw, 560px);
+        background: rgba(255, 255, 255, 0.8);
+      }
+      body {
+        padding: 10vh 5vw;
+      }
+      body::after {
+        display: none;
+      }
+      #language-select {
+        top: 10px;
+        right: 10px;
+        padding: 6px 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <select id="language-select">
+    <option value="zh-CN">简体中文</option>
+    <option value="zh-TW">繁體中文</option>
+    <option value="en">English</option>
+    <option value="ja">日本語</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="ru">Русский</option>
+    <option value="ko">한국어</option>
+    <option value="ko-DPRK">조선어</option>
+  </select>
+
+  <main class="card">
+    <h1 id="main-title"><span style="color: #FF1493;">雪秋小可爱</span><span style="color: #0066CC;">@XUEQIUxka</span></h1>
+
+    <!-- 把图片文件放在同级目录并命名为 image.png 即可显示 -->
+    <img id="profileImage" src="image.png" alt="这里是雪秋小可爱@XUEQIUxka" />
+
+    <section id="contact-section" class="contact" aria-label="联系方式">
+      <div id="quote" style="font-size: 1.2rem;"><strong>"我始于卑微,命如蝼蚁,但我向往光明,愿能终于璀璨"</strong></div>
+      <div id="null-site">一个没有意义的网站：<a href="https://null.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">null.xueqiuxka.cn</a></div> 
+      <div id="eat-site">一个决定吃什么的网站：<a href="https://eat.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">eat.xueqiuxka.cn</a></div> 
+      <div id="yl-site">一个制作表情包语录的网站：<a href="https://yl.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">yl.xueqiuxka.cn</a></div>
+      <div id="gif-site">一个生成动图的网站：<a href="https://gif.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">gif.xueqiuxka.cn</a></div>
+      <div id="email">邮箱：<a href="mailto:xueqiuxka@xueqiuxka.cn">xueqiuxka@xueqiuxka.cn</a></div>
+      <div id="twitter">Twitter：<a href="https://x.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">@XUEQIUxka</a></div>
+      <div id="telegram">Telegram：<a href="https://tg.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">tg.xuequixka.cn</a></div>
+      <div id="telegram-group">Telegram 群组：<a href="https://qz.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">qz.xueqiuxka.cn</a></div>
+      <div id="zhihu">知乎：<a href="https://zh.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">zh.xueqiuxka.cn</a></div>
+      <div id="account">全平台账号：雪秋小可爱</div>
+      <div id="id">全平台ID：XUEQIUxka</div>
+      <div id="nfc" style="font-size: 0.9rem;">如果您是通过卡片进入，可以下载<a href="https://wakdev.com/en/apps/nfc-tools-android.html" target="_blank" rel="noopener noreferrer">NFC tools</a>修改,令其成为你所需要的卡片</div>
+      <div id="empty"> </div>
+    </section>
+  <footer class="site-footer">
+    ©2013‑<span id="year1"></span> 雪秋小可爱 XUEQIUxka <br>
+    ©2018‑<span id="year2"></span> 雪玥医药科技股份有限公司<br>
+    ©2018‑<span id="year3"></span> XUEYUE Pharmaceutical Co., Ltd.<br>
+    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a>
+  </footer>
+
+  </main>
+
+  <!-- @XUEQIUxka @wxb_NB -->
+  
+  <script>
+    const translations = {
+      'zh-CN': {
+        title: '雪秋小可爱',
+        h1: '<span style="color: #FF1493;">雪秋小可爱</span><span style="color: #0066CC;">@XUEQIUxka</span>',
+        imgAlt: '这里是雪秋小可爱@XUEQIUxka',
+        contactAria: '联系方式',
+        quote: '<strong>"我始于卑微,命如蝼蚁,但我向往光明,愿能终于璀璨"</strong>',
+        nullSite: '一个没有意义的网站：<a href="https://null.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">null.xueqiuxka.cn</a>',
+        eatSite: '一个决定吃什么的网站：<a href="https://eat.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">eat.xueqiuxka.cn</a>',
+        ylSite: '一个制作表情包语录的网站：<a href="https://yl.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">yl.xueqiuxka.cn</a>',
+        gifSite: '一个生成动图的网站：<a href="https://gif.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">gif.xueqiuxka.cn</a>',
+        email: '邮箱：<a href="mailto:xueqiuxka@xueqiuxka.cn">xueqiuxka@xueqiuxka.cn</a>',
+        twitter: 'Twitter：<a href="https://x.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">@XUEQIUxka</a>',
+        telegram: 'Telegram：<a href="https://tg.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">tg.xueqiuxka.cn</a>',
+        telegramGroup: 'Telegram 群组：<a href="https://qz.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">qz.xueqiuxka.cn</a>',
+        zhihu: '知乎：<a href="https://zh.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">zh.xueqiuxka.cn</a>',
+        account: '全平台账号：雪秋小可爱',
+        id: '全平台ID：XUEQIUxka',
+        nfc: '如果您是通过卡片进入，可以下载<a href="https://wakdev.com/en/apps/nfc-tools-android.html" target="_blank" rel="noopener noreferrer">NFC tools</a>修改,令其成为你所需要的卡片',
+        footer: '©2013‑<span id="year1"></span> 雪秋小可爱 XUEQIUxka <br>\n    ©2018‑<span id="year2"></span> 雪玥医药科技股份有限公司<br>\n    ©2018‑<span id="year3"></span> XUEYUE Pharmaceutical Co., Ltd.<br>\n    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a>'
+      },
+      'zh-TW': {
+        title: '雪秋小可愛',
+        h1: '<span style="color: #FF1493;">雪秋小可愛</span><span style="color: #0066CC;">@XUEQIUxka</span>',
+        imgAlt: '這裡是雪秋小可愛@XUEQIUxka',
+        contactAria: '聯繫方式',
+        quote: '<strong>"我始於卑微,命如螻蟻,但我嚮往光明,願能終於璀璨"</strong>',
+        nullSite: '一個沒有意義的網站：<a href="https://null.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">null.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">暫不支持非中文訪問</div>',
+        eatSite: '一個決定吃什麼的網站：<a href="https://eat.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">eat.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">暫不支持非中文訪問</div>',
+        ylSite: '一個製作表情包語錄的網站：<a href="https://yl.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">yl.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">暫不支持非中文訪問</div>',
+        gifSite: '一個生成動圖的網站：<a href="https://gif.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">gif.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">暫不支持非中文訪問</div>',
+        email: '郵箱：<a href="mailto:xueqiuxka@xueqiuxka.cn">xueqiuxka@xueqiuxka.cn</a>',
+        twitter: 'Twitter：<a href="https://x.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">@XUEQIUxka</a>',
+        telegram: 'Telegram：<a href="https://tg.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">tg.xueqiuxka.cn</a>',
+        telegramGroup: 'Telegram 群組：<a href="https://qz.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">qz.xueqiuxka.cn</a>',
+        zhihu: '知乎：<a href="https://zh.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">zh.xueqiuxka.cn</a>',
+        account: '全平台帳號：雪秋小可愛',
+        id: '全平台ID：XUEQIUxka',
+        nfc: '如果您是通過卡片進入，可以下載<a href="https://wakdev.com/en/apps/nfc-tools-android.html" target="_blank" rel="noopener noreferrer">NFC tools</a>修改,令其成為你所需要的卡片',
+        footer: '©2013‑<span id="year1"></span> 雪秋小可爱 XUEQIUxka <br>\n    ©2018‑<span id="year2"></span> 雪玥医药科技股份有限公司<br>\n    ©2018‑<span id="year3"></span> XUEYUE Pharmaceutical Co., Ltd.<br>\n    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a>'
+      },
+      'en': {
+        title: 'Xueqiu Xiaokeai',
+        h1: '<span style="color: #FF1493;">Xueqiu Xiaokeai</span><span style="color: #0066CC;">@XUEQIUxka</span>',
+        imgAlt: 'Here is Xueqiu Xiaokeai @XUEQIUxka',
+        contactAria: 'Contact Information',
+        quote: '<strong>"I started from humble beginnings, my life like an ant, but I yearn for light, wishing to end in brilliance"</strong>',
+        nullSite: 'A meaningless website: <a href="https://null.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">null.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">Not supporting non-Chinese access</div>',
+        eatSite: 'A website to decide what to eat: <a href="https://eat.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">eat.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">Not supporting non-Chinese access</div>',
+        ylSite: 'A website to make meme quotes: <a href="https://yl.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">yl.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">Not supporting non-Chinese access</div>',
+        gifSite: 'A website to generate GIFs: <a href="https://gif.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">gif.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">Not supporting non-Chinese access</div>',
+        email: 'Email: <a href="mailto:xueqiuxka@xueqiuxka.cn">xueqiuxka@xueqiuxka.cn</a>',
+        twitter: 'Twitter: <a href="https://x.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">@XUEQIUxka</a>',
+        telegram: 'Telegram: <a href="https://tg.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">tg.xueqiuxka.cn</a>',
+        telegramGroup: 'Telegram Group: <a href="https://qz.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">qz.xueqiuxka.cn</a>',
+        zhihu: 'Zhihu: <a href="https://zh.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">zh.xueqiuxka.cn</a>',
+        account: 'All-platform account: 雪秋小可爱',
+        id: 'All-platform ID: XUEQIUxka',
+        nfc: 'If you entered via card, you can download <a href="https://wakdev.com/en/apps/nfc-tools-android.html" target="_blank" rel="noopener noreferrer">NFC tools</a> to modify it to become the card you need',
+        footer: '©2013‑<span id="year1"></span> 雪秋小可爱 XUEQIUxka <br>\n    ©2018‑<span id="year2"></span> 雪玥医药科技股份有限公司<br>\n    ©2018‑<span id="year3"></span> XUEYUE Pharmaceutical Co., Ltd.<br>\n    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a>'
+      },
+      'ja': {
+        title: '雪秋小可愛',
+        h1: '<span style="color: #FF1493;">雪秋小可愛</span><span style="color: #0066CC;">@XUEQIUxka</span>',
+        imgAlt: 'ここは雪秋小可愛@XUEQIUxkaです',
+        contactAria: '連絡先',
+        quote: '<strong>"私は卑微な始まりから、アリの命のように、しかし光を憧れ、輝きで終わることを願う"</strong>',
+        nullSite: '意味のないウェブサイト：<a href="https://null.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">null.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">中文以外のアクセスはサポートされていません</div>',
+        eatSite: '何を食べるかを決めるウェブサイト：<a href="https://eat.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">eat.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">中文以外のアクセスはサポートされていません</div>',
+        ylSite: 'ミーム引用を作るウェブサイト：<a href="https://yl.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">yl.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">中文以外のアクセスはサポートされていません</div>',
+        gifSite: 'GIFを生成するウェブサイト：<a href="https://gif.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">gif.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">中文以外のアクセスはサポートされていません</div>',
+        email: 'メール：<a href="mailto:xueqiuxka@xueqiuxka.cn">xueqiuxka@xueqiuxka.cn</a>',
+        twitter: 'Twitter：<a href="https://x.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">@XUEQIUxka</a>',
+        telegram: 'Telegram：<a href="https://tg.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">tg.xueqiuxka.cn</a>',
+        telegramGroup: 'Telegramグループ：<a href="https://qz.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">qz.xueqiuxka.cn</a>',
+        zhihu: 'Zhihu：<a href="https://zh.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">zh.xueqiuxka.cn</a>',
+        account: '全プラットフォームアカウント：雪秋小可爱',
+        id: '全プラットフォームID：XUEQIUxka',
+        nfc: 'カードから入った場合、<a href="https://wakdev.com/en/apps/nfc-tools-android.html" target="_blank" rel="noopener noreferrer">NFC tools</a>をダウンロードして変更し、必要なカードにすることができます',
+        footer: '©2013‑<span id="year1"></span> 雪秋小可爱 XUEQIUxka <br>\n    ©2018‑<span id="year2"></span> 雪玥医药科技股份有限公司<br>\n    ©2018‑<span id="year3"></span> XUEYUE Pharmaceutical Co., Ltd.<br>\n    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a>'
+      },
+      'fr': {
+        title: 'Xueqiu Xiaokeai',
+        h1: '<span style="color: #FF1493;">Xueqiu Xiaokeai</span><span style="color: #0066CC;">@XUEQIUxka</span>',
+        imgAlt: 'Voici Xueqiu Xiaokeai @XUEQIUxka',
+        contactAria: 'Informations de contact',
+        quote: '<strong>"J\'ai commencé par des origines humbles, ma vie comme une fourmi, mais j\'aspire à la lumière, souhaitant finir dans l\'éclat"</strong>',
+        nullSite: 'Un site web sans signification: <a href="https://null.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">null.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">L\'accès non chinois n\'est pas supporté</div>',
+        eatSite: 'Un site web pour décider quoi manger: <a href="https://eat.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">eat.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">L\'accès non chinois n\'est pas supporté</div>',
+        ylSite: 'Un site web pour créer des citations de mèmes: <a href="https://yl.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">yl.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">L\'accès non chinois n\'est pas supporté</div>',
+        gifSite: 'Un site web pour générer des GIF: <a href="https://gif.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">gif.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">L\'accès non chinois n\'est pas supporté</div>',
+        email: 'Email: <a href="mailto:xueqiuxka@xueqiuxka.cn">xueqiuxka@xueqiuxka.cn</a>',
+        twitter: 'Twitter: <a href="https://x.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">@XUEQIUxka</a>',
+        telegram: 'Telegram: <a href="https://tg.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">tg.xueqiuxka.cn</a>',
+        telegramGroup: 'Groupe Telegram: <a href="https://qz.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">qz.xueqiuxka.cn</a>',
+        zhihu: 'Zhihu: <a href="https://zh.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">zh.xueqiuxka.cn</a>',
+        account: 'Compte toutes plateformes: 雪秋小可爱',
+        id: 'ID toutes plateformes: XUEQIUxka',
+        nfc: 'Si vous êtes entré via carte, vous pouvez télécharger <a href="https://wakdev.com/en/apps/nfc-tools-android.html" target="_blank" rel="noopener noreferrer">NFC tools</a> pour le modifier et en faire la carte dont vous avez besoin',
+        footer: '©2013‑<span id="year1"></span> 雪秋小可爱 XUEQIUxka <br>\n    ©2018‑<span id="year2"></span> 雪玥医药科技股份有限公司<br>\n    ©2018‑<span id="year3"></span> XUEYUE Pharmaceutical Co., Ltd.<br>\n    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a>'
+      },
+      'de': {
+        title: 'Xueqiu Xiaokeai',
+        h1: '<span style="color: #FF1493;">Xueqiu Xiaokeai</span><span style="color: #0066CC;">@XUEQIUxka</span>',
+        imgAlt: 'Hier ist Xueqiu Xiaokeai @XUEQIUxka',
+        contactAria: 'Kontaktinformationen',
+        quote: '<strong>"Ich begann aus bescheidenen Anfängen, mein Leben wie eine Ameise, aber ich sehne mich nach Licht, wünschend, in Glanz zu enden"</strong>',
+        nullSite: 'Eine bedeutungslose Website: <a href="https://null.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">null.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">Nicht-chinesischer Zugriff wird nicht unterstützt</div>',
+        eatSite: 'Eine Website, um zu entscheiden, was zu essen: <a href="https://eat.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">eat.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">Nicht-chinesischer Zugriff wird nicht unterstützt</div>',
+        ylSite: 'Eine Website, um Meme-Zitate zu erstellen: <a href="https://yl.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">yl.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">Nicht-chinesischer Zugriff wird nicht unterstützt</div>',
+        gifSite: 'Eine Website, um GIFs zu generieren: <a href="https://gif.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">gif.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">Nicht-chinesischer Zugriff wird nicht unterstützt</div>',
+        email: 'E-Mail: <a href="mailto:xueqiuxka@xueqiuxka.cn">xueqiuxka@xueqiuxka.cn</a>',
+        twitter: 'Twitter: <a href="https://x.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">@XUEQIUxka</a>',
+        telegram: 'Telegram: <a href="https://tg.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">tg.xueqiuxka.cn</a>',
+        telegramGroup: 'Telegram-Gruppe: <a href="https://qz.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">qz.xueqiuxka.cn</a>',
+        zhihu: 'Zhihu: <a href="https://zh.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">zh.xueqiuxka.cn</a>',
+        account: 'Alle-Plattform-Konto: 雪秋小可爱',
+        id: 'Alle-Plattform-ID: XUEQIUxka',
+        nfc: 'Wenn Sie über Karte eingetreten sind, können Sie <a href="https://wakdev.com/en/apps/nfc-tools-android.html" target="_blank" rel="noopener noreferrer">NFC tools</a> herunterladen, um es zu ändern und die Karte zu machen, die Sie brauchen',
+        footer: '©2013‑<span id="year1"></span> 雪秋小可爱 XUEQIUxka <br>\n    ©2018‑<span id="year2"></span> 雪玥医药科技股份有限公司<br>\n    ©2018‑<span id="year3"></span> XUEYUE Pharmaceutical Co., Ltd.<br>\n    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a>'
+      },
+      'ru': {
+        title: 'Сюэцю Сяокэай',
+        h1: '<span style="color: #FF1493;">Сюэцю Сяокэай</span><span style="color: #0066CC;">@XUEQIUxka</span>',
+        imgAlt: 'Здесь Сюэцю Сяокэай @XUEQIUxka',
+        contactAria: 'Контактная информация',
+        quote: '<strong>"Я начал с скромных начал, моя жизнь как муравей, но я тоскую по свету, желая закончить в блеске"</strong>',
+        nullSite: 'Бессмысленный сайт: <a href="https://null.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">null.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">Доступ на других языках не поддерживается</div>',
+        eatSite: 'Сайт для решения, что есть: <a href="https://eat.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">eat.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">Доступ на других языках не поддерживается</div>',
+        ylSite: 'Сайт для создания цитат мемов: <a href="https://yl.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">yl.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">Доступ на других языках не поддерживается</div>',
+        gifSite: 'Сайт для генерации GIF: <a href="https://gif.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">gif.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">Доступ на других языках не поддерживается</div>',
+        email: 'Электронная почта: <a href="mailto:xueqiuxka@xueqiuxka.cn">xueqiuxka@xueqiuxka.cn</a>',
+        twitter: 'Twitter: <a href="https://x.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">@XUEQIUxka</a>',
+        telegram: 'Telegram: <a href="https://tg.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">tg.xueqiuxka.cn</a>',
+        telegramGroup: 'Группа Telegram: <a href="https://qz.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">qz.xueqiuxka.cn</a>',
+        zhihu: 'Zhihu: <a href="https://zh.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">zh.xueqiuxka.cn</a>',
+        account: 'Аккаунт на всех платформах: 雪秋小可爱',
+        id: 'ID на всех платформах: XUEQIUxka',
+        nfc: 'Если вы вошли через карту, вы можете скачать <a href="https://wakdev.com/en/apps/nfc-tools-android.html" target="_blank" rel="noopener noreferrer">NFC tools</a> для изменения, чтобы сделать карту, которая вам нужна',
+        footer: '©2013‑<span id="year1"></span> 雪秋小可爱 XUEQIUxka <br>\n    ©2018‑<span id="year2"></span> 雪玥医药科技股份有限公司<br>\n    ©2018‑<span id="year3"></span> XUEYUE Pharmaceutical Co., Ltd.<br>\n    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a>'
+      },
+      'ko': {
+        title: '설추 소可爱',
+        h1: '<span style="color: #FF1493;">설추 소可爱</span><span style="color: #0066CC;">@XUEQIUxka</span>',
+        imgAlt: '여기 설추 소可爱 @XUEQIUxka입니다',
+        contactAria: '연락처 정보',
+        quote: '<strong>"나는卑微한 시작에서, 개미 같은 삶, 하지만 빛을 그리워하며, 광채로 끝나기를 바란다"</strong>',
+        nullSite: '의미 없는 웹사이트: <a href="https://null.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">null.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">중국어가 아닌 언어는 지원하지 않습니다</div>',
+        eatSite: '무엇을 먹을지 결정하는 웹사이트: <a href="https://eat.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">eat.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">중국어가 아닌 언어는 지원하지 않습니다</div>',
+        ylSite: '밈 인용구를 만드는 웹사이트: <a href="https://yl.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">yl.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">중국어가 아닌 언어는 지원하지 않습니다</div>',
+        gifSite: 'GIF를 생성하는 웹사이트: <a href="https://gif.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">gif.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">중국어가 아닌 언어는 지원하지 않습니다</div>',
+        email: '이메일: <a href="mailto:xueqiuxka@xueqiuxka.cn">xueqiuxka@xueqiuxka.cn</a>',
+        twitter: 'Twitter: <a href="https://x.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">@XUEQIUxka</a>',
+        telegram: 'Telegram: <a href="https://tg.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">tg.xueqiuxka.cn</a>',
+        telegramGroup: 'Telegram 그룹: <a href="https://qz.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">qz.xueqiuxka.cn</a>',
+        zhihu: 'Zhihu: <a href="https://zh.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">zh.xueqiuxka.cn</a>',
+        account: '모든 플랫폼 계정: 雪秋小可爱',
+        id: '모든 플랫폼 ID: XUEQIUxka',
+        nfc: '카드로 들어온 경우, <a href="https://wakdev.com/en/apps/nfc-tools-android.html" target="_blank" rel="noopener noreferrer">NFC tools</a>를 다운로드하여 수정하여 필요한 카드로 만들 수 있습니다',
+        footer: '©2013‑<span id="year1"></span> 雪秋小可爱 XUEQIUxka <br>\n    ©2018‑<span id="year2"></span> 雪玥医药科技股份有限公司<br>\n    ©2018‑<span id="year3"></span> XUEYUE Pharmaceutical Co., Ltd.<br>\n    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a>'
+      },
+      'ko-DPRK': {
+        title: '설추 소可爱',
+        h1: '<span style="color: #FF1493;">설추 소可爱</span><span style="color: #0066CC;">@XUEQIUxka</span>',
+        imgAlt: '여기 설추 소可爱 @XUEQIUxka입니다',
+        contactAria: '연락처 정보',
+        quote: '<strong>"나는卑微한 시작에서, 개미 같은 삶, 하지만 빛을 그리워하며, 광채로 끝나기를 바란다"</strong>',
+        nullSite: '의미 없는 웹사이트: <a href="https://null.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">null.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">중국어가 아닌 언어는 지원하지 않습니다</div>',
+        eatSite: '무엇을 먹을지 결정하는 웹사이트: <a href="https://eat.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">eat.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">중국어가 아닌 언어는 지원하지 않습니다</div>',
+        ylSite: '밈 인용구를 만드는 웹사이트: <a href="https://yl.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">yl.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">중국어가 아닌 언어는 지원하지 않습니다</div>',
+        gifSite: 'GIF를 생성하는 웹사이트: <a href="https://gif.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">gif.xueqiuxka.cn</a><div style="font-size: 0.85rem; color: #999; margin-top: 2px;">중국어가 아닌 언어는 지원하지 않습니다</div>',
+        email: '이메일: <a href="mailto:xueqiuxka@xueqiuxka.cn">xueqiuxka@xueqiuxka.cn</a>',
+        twitter: 'Twitter: <a href="https://x.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">@XUEQIUxka</a>',
+        telegram: 'Telegram: <a href="https://tg.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">tg.xueqiuxka.cn</a>',
+        telegramGroup: 'Telegram 그룹: <a href="https://qz.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">qz.xueqiuxka.cn</a>',
+        zhihu: 'Zhihu: <a href="https://zh.xueqiuxka.cn" target="_blank" rel="noopener noreferrer">zh.xueqiuxka.cn</a>',
+        account: '모든 플랫폼 계정: 雪秋小可爱',
+        id: '모든 플랫폼 ID: XUEQIUxka',
+        nfc: '카드로 들어온 경우, <a href="https://wakdev.com/en/apps/nfc-tools-android.html" target="_blank" rel="noopener noreferrer">NFC tools</a>를 다운로드하여 수정하여 필요한 카드로 만들 수 있습니다',
+        footer: '©2013‑<span id="year1"></span> 雪秋小可爱 XUEQIUxka <br>\n    ©2018‑<span id="year2"></span> 雪玥医药科技股份有限公司<br>\n    ©2018‑<span id="year3"></span> XUEYUE Pharmaceutical Co., Ltd.<br>\n    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a>'
+      }
+    };
+
+    function changeLanguage(lang) {
+      document.title = translations[lang].title;
+      document.getElementById('main-title').innerHTML = translations[lang].h1;
+      document.getElementById('profileImage').alt = translations[lang].imgAlt;
+      document.getElementById('contact-section').setAttribute('aria-label', translations[lang].contactAria);
+      document.getElementById('quote').innerHTML = translations[lang].quote;
+      document.getElementById('null-site').innerHTML = translations[lang].nullSite;
+      document.getElementById('eat-site').innerHTML = translations[lang].eatSite;
+      document.getElementById('yl-site').innerHTML = translations[lang].ylSite;
+      document.getElementById('gif-site').innerHTML = translations[lang].gifSite;
+      document.getElementById('email').innerHTML = translations[lang].email;
+      document.getElementById('twitter').innerHTML = translations[lang].twitter;
+      document.getElementById('telegram').innerHTML = translations[lang].telegram;
+      document.getElementById('telegram-group').innerHTML = translations[lang].telegramGroup;
+      document.getElementById('zhihu').innerHTML = translations[lang].zhihu;
+      document.getElementById('account').innerHTML = translations[lang].account;
+      document.getElementById('id').innerHTML = translations[lang].id;
+      document.getElementById('nfc').innerHTML = translations[lang].nfc;
+      document.querySelector('.site-footer').innerHTML = translations[lang].footer;
+      // Update years
+      const now = new Date().getFullYear();
+      document.getElementById('year1').textContent = now;
+      document.getElementById('year2').textContent = now;
+      document.getElementById('year3').textContent = now;
+    }
+
+    document.getElementById('language-select').addEventListener('change', (e) => {
+      changeLanguage(e.target.value);
+    });
+
+    // Set default language
+    changeLanguage('zh-CN');
+
+    const img = document.getElementById('profileImage');
+    img.addEventListener('error', () => {
+      img.style.display = 'none';
+    });
+
+    // 自动填充当前年份
+    const now = new Date().getFullYear();
+    document.getElementById('year1').textContent = now;
+    document.getElementById('year2').textContent = now;
+    document.getElementById('year3').textContent = now;
+  </script>
+</body>
+</html>
