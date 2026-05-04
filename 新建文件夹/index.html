@@ -6,7 +6,23 @@
   <title>雪秋小可爱</title>
   <link rel="icon" type="image/jpeg" href="123123123.jpg" />
   <style>
-    :root { color-scheme: light; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      color-scheme: light;
+      --primary-color: #6366f1;
+      --secondary-color: #ec4899;
+      --accent-color: #f59e0b;
+      --bg-color: #0f172a;
+      --surface-color: #1e293b;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --border-color: #334155;
+    }
     .site-footer {
       text-align: center;
       padding: 1rem 0;
@@ -16,10 +32,10 @@
       /* position: fixed; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,.8); */
     }
     .language-switcher {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 20;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
     }
     body {
       margin: 0;
@@ -87,39 +103,36 @@
     a:hover { text-decoration: underline; }
 
     #language-select {
-      position: fixed;
-      top: 20px;
-      right: 20px;
       padding: 8px 12px;
-      border: 1px solid #2563eb;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.9);
-      color: #1f2937;
-      font-size: 0.95rem;
-      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      border: 2px solid #e8e8e8;
+      border-radius: 16px;
+      background: #ffffff;
+      color: #000000;
+      font-size: 0.9rem;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       cursor: pointer;
       transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      z-index: 100;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      min-width: 160px;
     }
 
     #language-select:hover {
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
-      border-color: #1d4ed8;
+      border-color: var(--primary-color);
+      box-shadow: 0 15px 35px rgba(99, 102, 241, 0.25);
     }
 
     #language-select:focus {
       outline: none;
-      background: rgba(255, 255, 255, 0.95);
-      border-color: #1d4ed8;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      border-color: var(--primary-color);
+      box-shadow: 0 15px 35px rgba(99, 102, 241, 0.5);
     }
 
     #language-select option {
-      background: white;
-      color: #1f2937;
+      background: #ffffff;
+      color: #333333;
       padding: 8px;
     }
 
@@ -148,11 +161,15 @@
       body::after {
         display: none;
       }
-      #language-select {
+      .language-switcher {
         top: 10px;
         right: 10px;
-        padding: 6px 10px;
-        font-size: 0.9rem;
+      }
+
+      #language-select {
+        padding: 10px 16px;
+        font-size: 1rem;
+        min-width: 150px;
       }
     }
   </style>
