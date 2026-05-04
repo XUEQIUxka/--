@@ -290,8 +290,8 @@
     ©2013‑<span id="year1"></span> 雪秋小可爱 XUEQIUxka <br>
     ©2018‑<span id="year2"></span> 雪玥医药科技股份有限公司<br>
     ©2018‑<span id="year3"></span> XUEYUE Pharmaceutical Co., Ltd.<br>
-    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a><br>
-    <a href="https://xueqiuxka.cn" target="_blank" rel="noopener noreferrer">雪ICP备20130619号</a>
+    <a href="https://xueqiuxka.cn" target="_blank" rel="noopener noreferrer">雪ICP备20130619号</a><br>
+    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a>
   </footer>
 
   </main>
@@ -528,7 +528,10 @@
       document.getElementById('id').innerHTML = translations[lang].id;
       document.getElementById('friend-link').innerHTML = translations[lang].friendLink;
       document.getElementById('nfc').innerHTML = translations[lang].nfc;
-      document.querySelector('.site-footer').innerHTML = `${translations[lang].footer}<br>\n    <a href="https://xueqiuxka.cn" target="_blank" rel="noopener noreferrer">雪ICP备20130619号</a>`;
+      document.querySelector('.site-footer').innerHTML = translations[lang].footer.replace(
+        '<a href="https://icp.gov.moe',
+        '<a href="https://xueqiuxka.cn" target="_blank" rel="noopener noreferrer">雪ICP备20130619号</a><br>\n    <a href="https://icp.gov.moe'
+      );
       // Update years
       const now = new Date().getFullYear();
       document.getElementById('year1').textContent = now;
