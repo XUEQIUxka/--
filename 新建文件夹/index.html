@@ -287,7 +287,6 @@
       <div id="id">全平台ID：XUEQIUxka</div>
       <div id="friend-link">友链：<a href="https://awacat.cc" target="_blank" rel="noopener noreferrer">awacat.cc</a>（小草莓可爱捏）</div>
       <div id="nfc" style="font-size: 0.9rem;">如果您是通过卡片进入，可以下载<a href="https://wakdev.com/en/apps/nfc-tools-android.html" target="_blank" rel="noopener noreferrer">NFC tools</a>修改,令其成为你所需要的卡片</div>
-      <div id="domain-redirect">已实现xueqiuxka.com自动跳转xueqiuxka.cn</div>
       <div id="empty"> </div>
     </section>
   <footer class="site-footer">
@@ -295,7 +294,8 @@
     ©2018‑<span id="year2"></span> 雪玥医药科技股份有限公司<br>
     ©2018‑<span id="year3"></span> XUEYUE Pharmaceutical Co., Ltd.<br>
     <a href="https://xueqiuxka.cn" target="_blank" rel="noopener noreferrer">雪ICP备20130619号</a><br>
-    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a>
+    <a href="https://icp.gov.moe/?keyword=20266019" target="_blank">萌ICP备20266019号</a><br>
+    <div id="domain-redirect">已实现xueqiuxka.com自动跳转xueqiuxka.cn</div>
   </footer>
 
   </main>
@@ -541,11 +541,12 @@
       document.getElementById('id').innerHTML = translations[lang].id;
       document.getElementById('friend-link').innerHTML = translations[lang].friendLink;
       document.getElementById('nfc').innerHTML = translations[lang].nfc;
-      document.getElementById('domain-redirect').innerHTML = translations[lang].domainRedirect;
-      document.querySelector('.site-footer').innerHTML = translations[lang].footer.replace(
+      const footer = document.querySelector('.site-footer');
+      footer.innerHTML = translations[lang].footer.replace(
         '<a href="https://icp.gov.moe',
         '<a href="https://xueqiuxka.cn" target="_blank" rel="noopener noreferrer">雪ICP备20130619号</a><br>\n    <a href="https://icp.gov.moe'
       );
+      footer.innerHTML += `<br><div id="domain-redirect">${translations[lang].domainRedirect}</div>`;
       // Update years
       const now = new Date().getFullYear();
       document.getElementById('year1').textContent = now;
